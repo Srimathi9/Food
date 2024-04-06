@@ -1,0 +1,216 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color:rgba(0, 0, 0, 0.8);
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+nav ul{
+    list-style-type: none;
+    padding: 30px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+nav ul li a:hover{
+    background-color: lightseagreen;
+    border-radius: 5px;
+}
+.sub-nav a{
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    width: 30%;
+}
+nav img{
+    width: 19%;
+    border-radius: 50%;
+}
+nav span{
+    width: 20%;
+    font-size: 40px;color:lightcoral;
+    position: absolute;
+    top: 3%;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    display: none;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 47px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px -4px #aaaaaaaa,-10px -10px 24px #ffffff;
+    height: 450px;
+    width: 800px;
+    position: relative;
+}
+.slideshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+}
+@keyframes slide{
+    0%{background-image: url('menu13.jpg');}
+    25%{background-image: url('menu11.jpg');}
+    50%{background-image: url('./menu15.jpg');}
+    75%{background-image: url('./menu14.jpg');}
+    100%{background-image: url('./menu3.jpg');}
+}
+.about-details{
+    margin: 0 45px;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 50%;
+    padding: 20px;
+}
+.about-details span{
+    color: chocolate;
+}
+.about-details h2{
+    font-family: "potta one";
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.about-details p{
+    color: gray;
+    font-size: 25px;
+}
+.image img{
+    height: 250px;
+    width: 250px; 
+    left: 40%;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+    animation-delay: 1s;
+}
+footer{
+    width: 100%;
+    padding: 5%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    justify-content: center; gap:20px ;
+    background-color: rgb(168, 168, 219);
+    margin-top: 30px;
+}
+.box ul{
+    list-style: none;
+    padding: 10px;
+    line-height: 30px;
+}
+.icon{ color:white;
+    font-size:25px;
+    padding: 10px;
+    /* background-color:darkcyan; */
+    /* border: 2px solid rgb(236, 158, 158); */
+    border-radius: 50%;
+    margin: 2px;    
+}
+.icon:hover{
+   cursor: pointer;
+}
+footer h1{
+    color:rgb(207, 134, 110);
+}
+.fa-facebook-f{
+    color: blue;
+}
+.fa-twitter{
+    color: black;
+}
+.fa-instagram{
+    color: orange;
+}
+.fa-linkedin-in{
+    color: black;
+}
+@media only screen and (max-width:500px) {
+    .fa-bars{
+        display: block!important;
+    }
+    .sub-nav ul li{
+        display:flex; flex-direction: column; 
+    }
+    
+    nav{
+        z-index: 3;
+       }
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(255, 0, 179, 0.945);
+        top: 73px;
+        transition: all 2s;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:900px) {
+ 
+    nav{
+        z-index: 3;
+       }
+       .fa-bars{
+        display: block!important;
+    }
+    .sub-nav ul li{
+        display:flex; flex-direction: column; 
+    }
+    
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(255, 0, 179, 0.945);
+        top: 17%;
+        transition: all 2s;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+    aside{
+        display:block ;
+    }
+}
